@@ -11,7 +11,7 @@ public class NameAttribute : ValidationAttribute
 
     public override bool IsValid(object? value) {
         string? name = value as string;
-        if(name.Length > 20)
+        if(name?.Length > 20)
             return false;
         return true;
     }

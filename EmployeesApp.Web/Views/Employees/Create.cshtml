@@ -8,11 +8,20 @@
     </head>
     <body>
         <form asp-controller = "Employees" asp-action="Create">
-            <label asp-for = "Name"></label>/>
+            <label asp-for = "Name"></label>
             <input asp-for ="Name"/>
+            
+            <span asp-validation-for="Name"></span>
+            <br/>
+            <label asp-for="Email"></label>
+            <input asp-for="Email" />
+            <span asp-validation-for="Email"></span>
+            <br/>
             <input type="Submit"  value="Ok" />
             
         </form>
+        
+        
         
     
     </body>

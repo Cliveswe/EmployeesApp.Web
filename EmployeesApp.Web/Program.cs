@@ -7,6 +7,7 @@ public class Program
         var app = builder.Build();
 
         app.MapGet("/", () => "Hello World!");
+        //Hej fråan Philippe
 
         app.Run();
     }

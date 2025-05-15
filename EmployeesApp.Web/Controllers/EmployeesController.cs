@@ -32,12 +32,12 @@ public class EmployeesController : Controller
 
     [HttpGet("/detail/{id}")]
     public IActionResult Detail(int id) {
-        var employee = EmployeeService.GetById(id);
+        var model = EmployeeService.GetById(id);
 
-        if(employee == null)
+        if(model == null)
             return View();
 
-        return View(employee);
+        return View(model);
 
     }
 

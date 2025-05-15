@@ -4,7 +4,6 @@ namespace EmployeesApp.Web.Models;
 
 public class Employee
 {
-
     public int Id { get; set; }
 
     [Required(ErrorMessage = "Enter Name")]

@@ -1,5 +1,6 @@
 ﻿@using EmployeesApp.Web.Models
 @model IEnumerable<Employee>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +14,7 @@
             <li>Email: @item.Email </li>
         }
         </ul>
-        <a asp-controller ="Employees" asp-action="Index">Home</a>
+        <a asp-controller ="Employees" asp-action="Index">Home</a> <br />
         <a asp-controller="Employees" asp-action="Create">Add Employee</a>
 
     </body>

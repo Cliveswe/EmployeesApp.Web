@@ -5,18 +5,22 @@ namespace EmployeesApp.Web.Services;
 public class EmployeeService
 {
     private static List<Employee> employees = [
-            new Employee(1, "Alice Johnson", "alice.johnson@example.com"),
-            new Employee(2, "Bob Smith", "bob.smith@example.com"),
-            new Employee(3, "Charlie Brown", "charlie.brown@example.com"),
-            new Employee(4, "Diana Prince", "diana.prince@example.com"),
-            new Employee(5, "Ethan Hunt", "ethan.hunt@example.com"),
-            new Employee(6, "Fiona Scott", "fiona.scott@example.com"),
-            new Employee(7, "George White", "george.white@example.com"),
-            new Employee(8, "Hannah Green", "hannah.green@example.com"),
-            new Employee(9, "Ian Black", "ian.black@example.com"),
-            new Employee(10, "Jane Miller", "jane.miller@example.com")
+            new Employee{Id = 1, Name = "Alice Johnson", Email = "alice.johnson@example.com" },
+            new Employee{Id = 2, Name = "Bob Smith", Email = "bob.smith@example.com" },
+            new Employee{Id = 3, Name = "Charlie Brown", Email = "charlie.brown@example.com" },
+            new Employee{Id = 4, Name = "Diana Prince", Email = "diana.prince@example.com" },
+            new Employee{Id = 5, Name = "Ethan Hunt", Email = "ethan.hunt@example.com" },
+            new Employee{Id = 6, Name = "Fiona Scott", Email = "fiona.scott@example.com" },
+            new Employee{Id = 7, Name = "George White", Email = "george.white@example.com" },
+            new Employee{Id = 8, Name = "Hannah Green",Email =  "hannah.green@example.com" },
+            new Employee{Id = 9, Name = "Ian Black", Email = "ian.black@example.com" },
+            new Employee{Id = 10, Name = "Jane Miller", Email = "jane.miller@example.com" }
         ];
 
-    private int NextId { get => employees.Max(o => o.Id) + 1; }
+    private int NextId { get => employees.Count == 0 ? employees.Max(o => o.Id) + 1 : 1; }
 
+    public void AddEmployee(Employee employee) {
+        employee.Id = NextId;
+        employees.Add(employee);
+    }
 }

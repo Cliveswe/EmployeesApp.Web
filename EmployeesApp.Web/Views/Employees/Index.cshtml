@@ -1,0 +1,17 @@
+﻿@using EmployeesApp.Web.Models
+@model IEnumerable<Employee>
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <ul>
+        @foreach(var item in Model)
+        {
+            <li>Name: @item.Name </li>
+            <li>Email: @item.Email </li>
+        }
+        </ul>
+    </body>
+    </html>

@@ -10,11 +10,11 @@
     <ul>
         @foreach(var item in Model)
         {
-            <li>Name: @item.Name </li>
-            <li>Email: @item.Email </li>
+            <li>
+                 <a asp-controller="Employees" asp-action="details" asp-route-id="@item.Name">@item.Name </a>
+            </li>
         }
         </ul>
-        <a asp-controller ="Employees" asp-action="Index">Home</a> <br />
         <a asp-controller="Employees" asp-action="Create">Add Employee</a>
 
     </body>

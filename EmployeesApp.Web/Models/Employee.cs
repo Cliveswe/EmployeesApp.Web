@@ -8,7 +8,7 @@ public class Employee
 
     [Required(ErrorMessage = "Enter Name")]
     [Display(Name = "Name", Prompt = "Enter a user name")]
-    [NameAttribute("Name")]
+    [NameAttribute("Name", ErrorMessage ="Name to long ! can have max 20 characters")]
     public string Name { get; set; }
 
     [Required(ErrorMessage = "Enter Email")]

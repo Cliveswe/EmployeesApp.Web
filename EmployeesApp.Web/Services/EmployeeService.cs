@@ -17,7 +17,7 @@ public class EmployeeService
             new Employee{Id = 10, Name = "Jane Miller", Email = "jane.miller@example.com" }
         ];
 
-    private int NextId { get => employees.Count == 0 ? employees.Max(o => o.Id) + 1 : 1; }
+    private int NextId { get => employees.Count > 0 ? employees.Max(o => o.Id) + 1 : 1; }
 
     public void AddEmployee(Employee employee) {
         employee.Id = NextId;

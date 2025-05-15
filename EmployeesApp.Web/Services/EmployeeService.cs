@@ -23,4 +23,9 @@ public class EmployeeService
         employee.Id = NextId;
         employees.Add(employee);
     }
+
+    public Employee[] GetAll() =>  employees.ToArray();
+
+    public Employee? GetById(int id) => employees.SingleOrDefault(employee => employee.Id == id);
+    
 }

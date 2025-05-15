@@ -8,6 +8,7 @@ public class Employee
 
     [Required(ErrorMessage = "Enter Name")]
     [Display(Name = "Name", Prompt = "Enter a user name")]
+    [NameAttribute("Name")]
     public string Name { get; set; }
 
     [Required(ErrorMessage = "Enter Email")]
